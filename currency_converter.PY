@@ -1,0 +1,15 @@
+conv={"USD":1,"AED":3.67,"AFN":89.56,"ALL":106.87,"AMD":396.42,"ANG":1.79,"AOA":509.86,"ARS":187.41,"AUD":1.44,"AWG":1.79,"AZN":1.7,"BAM":1.81,"BBD":2,"BDT":106.26,"BGN":1.8,"BHD":0.376,"BIF":2061.85,"BMD":1,"BND":1.32,"BOB":6.93,"BRL":5.06,"BSD":1,"BTN":82.22,"BWP":12.82,"BYN":2.59,"BZD":2,"CAD":1.34,"CDF":2074.26,"CHF":0.922,"CLP":781.52,"CNY":6.77,"COP":4640.84,"CRC":554.19,"CUP":24,"CVE":101.78,"CZK":21.86,"DJF":177.72,"DKK":6.89,"DOP":56.64,"DZD":135.77,"EGP":30.27,"ERN":15,"ETB":53.74,"EUR":0.923,"FJD":2.15,"FKP":0.825,"FOK":6.89,"GBP":0.826,"GEL":2.64,"GGP":0.825,"GHS":12.27,"GIP":0.825,"GMD":63.27,"GNF":8674.08,"GTQ":7.86,"GYD":211.15,"HKD":7.85,"HNL":24.68,"HRK":6.95,"HTG":150.18,"HUF":356.46,"IDR":14998.39,"ILS":3.42,"IMP":0.825,"INR":82.24,"IQD":1459.49,"IRR":42087.27,"ISK":140.57,"JEP":0.825,"JMD":153.72,"JOD":0.709,"JPY":130.23,"KES":124.57,"KGS":86.01,"KHR":4117.43,"KID":1.43,"KMF":454.12,"KRW":1237.85,"KWD":0.305,"KYD":0.833,"KZT":458.57,"LAK":16903.94,"LBP":1507.5,"LKR":364.98,"LRD":156.94,"LSL":17.38,"LYD":4.76,"MAD":10.13,"MDL":18.81,"MGA":4281.82,"MKD":56.44,"MMK":2102.43,"MNT":3489.38,"MOP":8.08,"MRU":36.4,"MUR":45.14,"MVR":15.47,"MWK":1031.16,"MXN":18.89,"MYR":4.25,"MZN":64.29,"NAD":17.38,"NGN":460.65,"NIO":36.51,"NOK":10.16,"NPR":131.55,"NZD":1.57,"OMR":0.384,"PAB":1,"PEN":3.86,"PGK":3.53,"PHP":54.02,"PKR":267.47,"PLN":4.33,"PYG":7294.67,"QAR":3.64,"RON":4.49,"RSD":107.23,"RUB":70.42,"RWF":1122.6,"SAR":3.75,"SBD":8.39,"SCR":13.44,"SDG":555.25,"SEK":10.48,"SGD":1.32,"SHP":0.825,"SLE":19.79,"SLL":19791.47,"SOS":568.87,"SRD":32.66,"SSP":729.5,"STN":22.62,"SYP":2527.77,"SZL":17.38,"THB":33.18,"TJS":10.31,"TMT":3.5,"TND":3.05,"TOP":2.3,"TRY":18.84,"TTD":6.76,"TVD":1.43,"TWD":29.85,"TZS":2338.38,"UAH":36.91,"UGX":3674.78,"UYU":38.7,"UZS":11278.36,"VES":22.91,"VND":23453.9,"VUV":115.32,"WST":2.65,"XAF":605.49,"XCD":2.7,"XDR":0.739,"XOF":605.49,"XPF":110.15,"YER":250.43,"ZAR":17.38,"ZMW":19.14,"ZWL":805.66}
+def curr(frm,to,amnt):
+    z=amnt/conv[frm]
+    y=z*conv[to]
+    return(y)
+x=input("from:")
+h=input("to:")
+u=float(input("ammount:"))
+if x in conv.keys() and h in conv.keys():
+    v= curr(x,h,u)
+    print(v)
+else:
+    print('please enter the right currancy and try again. hint:check the spelling, all letters are in upper case')
+
+
